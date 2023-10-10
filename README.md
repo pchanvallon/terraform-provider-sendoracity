@@ -11,8 +11,7 @@ In order to run the API locally make sure you have `docker-compose` installed on
 To run the API locally, run the following command:
 
 ```bash
-cd api/
-docker-compose up -d
+cd api && docker-compose up -d
 ```
 
 ## Exemple of usage
