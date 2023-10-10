@@ -1,0 +1,32 @@
+---
+cities:
+  - name: Paris
+    touristic: true
+    houses:
+      - address: 5 avenue Anatole France
+        inhabitants: 100
+      - address: 10 rue de la Paix
+        inhabitants: 50
+      - address: 7 avenue des champs elysees
+        inhabitants: 200
+    stores:
+      - name: Carrfour
+        address: 6 avenue Anatole France
+        type: food
+      - name: Zoro
+        address: 11 rue de la Paix
+        type: clothes
+      - name: Quicke
+        address: 8 avenue des champs elysees
+        type: food
+  - name: Troyes
+    touristic: false
+    houses:
+      - address: 21 rue Jean Jaures
+        inhabitants: 2
+      - address: 10 place Anatole France
+        inhabitants: 5
+    stores:
+      - name: Cocci Marche
+        address: 3 rue Aristide Briand
+        type: food

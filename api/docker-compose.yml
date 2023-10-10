@@ -1,0 +1,29 @@
+---
+version: '3.3'
+
+services:
+  db:
+    container_name: db
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  api:
+    container_name: api
+    image: ghcr.io/pchanvallon/sendoracity-api
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    environment:
+      POSTGRES_SERVER: db
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
